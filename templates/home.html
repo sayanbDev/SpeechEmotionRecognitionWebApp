@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>majorProject</title>
+    
+    <style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    h1 {
+        color: rgb(226, 70, 31);
+    }
+
+    p.e1 {
+        text-align: center;
+    }
+
+    p.e1 {
+        font-size: 30px;
+    }
+
+    p.e4 {
+        text-align: center;
+    }
+
+    p.e4 {
+        font-size: 25px;
+    }
+
+    p.e6 {
+        font-size: 18px;
+    }
+
+    p.e6 {
+        color: rgb(14, 10, 233);
+    }
+
+    .e3 {
+        text-align: center;
+    }
+
+    .button {
+        position: center;
+        top: 35%;
+    }
+
+    .e5 {
+        text-align: center;
+    }
+
+    p.e6 {
+        text-align: center;
+    }
+
+    .e7 {
+        text-align: center
+    }
+</style>
+
+<body bgcolor="neeraj">
+    <br><br>
+    <fieldset>
+        <h1>Speech Emotion Recognition using Neural Networks</h1><br><br><br>
+    </fieldset>
+    <p class="e1">Upload your audio file</p>
+
+    <!-- <form action="/base" method="get" enctype="multipart/form-data">
+        <div class="e5">
+            <div class="form-group">
+
+                <div class="custom-file">
+                    <input type="file" accept="audio/*" class="custom-file-input" name="audio" id="audio">
+                    <label class="custom-file-label" for="audio"></label>
+                </div>
+            </div>
+        </div>
+        <p class="e6">Click on 'Analyse' button to know the emotion</p>
+        <div class="e7">
+            <button type="submit" class="btn btn-primary">Upload</button>
+
+        </div>
+
+
+
+    </form> -->
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="e3">
+        
+            <div class="form-group">
+
+                <div class="custom-file">
+                    <input type="file" accept="audio/*" class="custom-file-input" name="audio" id="audio" controls>
+                    <label class="custom-file-label" for="audio"></label>
+                    <audio id="audio2" autoplay="autoplay">
+                      Your browser does not support the audio format.
+                    </audio> 
+                </div>
+            </div>
+        </div>
+    
+        <br><br>
+    <p class="e4">Click on play button to listen the audio</p>
+    <br><br><br><br>
+    <div class="e5">
+    <audio id="music" controls>
+  
+  
+Your browser does not support the audio element.
+</audio>
+
+</div>
+<br><br><br><br>
+
+
+
+<script type="text/javascript">
+  
+   var player = document.getElementById('music'); 
+
+function playSelectedFile(event) {
+    var file = this.files[0];
+    player.src = URL.createObjectURL(file);
+}
+
+var inputNode = document.querySelector('input');
+    inputNode.addEventListener('change', playSelectedFile, false);
+    
+</script>
+
+
+        <div class="e5">
+        
+        
+
+            <button type="submit" class="button">Analyse</button>
+        </div>
+       
+        
+
+    </form>
+
+
+
+    <br><br>
+
+    </form>
+
+
+
+
+
+</body>
+
+</html>
